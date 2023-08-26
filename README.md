@@ -9,11 +9,9 @@ Designing a database for a Red Bus application involves creating a structured sy
    - First Name
    - Last Name
    - Email
-   - Password (hashed and salted)
+   - Password
    - Contact Number
    - Address
-   - Role (User, Admin, etc.)
-   - Bus Operators:
 
 - Operator ID (Primary Key)
   - Operator Name
@@ -31,10 +29,13 @@ Designing a database for a Red Bus application involves creating a structured sy
 - Bus ID (Primary Key)
   - Bus Number/Name
   - Operator ID (Foreign Key referencing Bus Operators)
-  - Capacity
+  - Seat Capacity
   - Type (AC, Non-AC, Sleeper, etc.)
-  - Bookings:
-
+   
+- Driver ID (Primary Key)
+  - Driver Name
+  - Contact Number
+    
 - Booking ID (Primary Key)
   - User ID (Foreign Key referencing Users)
   - Bus ID (Foreign Key referencing Buses)
@@ -42,7 +43,7 @@ Designing a database for a Red Bus application involves creating a structured sy
   - Booking Date
   - Travel Date
   - Number of Passengers
-  - 
+   
 - Payments:
   - Payment ID (Primary Key)
   - Booking ID (Foreign Key referencing Bookings)
